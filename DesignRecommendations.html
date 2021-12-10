@@ -1,0 +1,101 @@
+<!-- Import CSS -->
+<link rel="stylesheet" type="text/css" href="./RecoCSS.css"  />
+
+
+
+
+<!-- Tab links -->
+<div class="tab">
+	<button class="tablinks" onclick="openReco(event, 'DissRes')">Distraction Resilience Design Recommendation</button>
+	<button class="tablinks" onclick="openReco(event, 'WarnPoly')">Warning Polymorphism Design Recommendation</button>
+</div>
+
+<!-- DISTRACTION RESILIENCE RECOMMENDATION TAB -->
+<div id="DissRes" class="tabcontent">
+
+	<div class ="around">
+		<div class="senderimg"><img src="https://images2.imgbox.com/c3/c6/xuzuGfoM_o.png" width="40"></div>
+
+		<div class="right">
+			<div class="sender">
+				<span class="senderN">Sender name</span> <span class="senderE">&#60;sender's email&#62;</span><br>
+				<div class="warningIcon">!
+					<span class="warningText">You moved this email out of spam.</span>
+				</div>
+				<span class="senderE">to me</span>
+			</div>
+
+			<div class="messageContent">
+				<p>Message content,<br><br>
+
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. <br><br>
+
+				Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- WARNING POLYMORPHISM RECOMMENDATION TAB -->
+<div id="WarnPoly" class="tabcontent">
+	<div class ="around">
+		<div class="senderimg"><img src="https://images2.imgbox.com/c3/c6/xuzuGfoM_o.png" width="40"></div>
+
+		<div class="right">
+			<div class="sender">
+				<span class="senderN">Sender name</span> <span class="senderE">&#60;sender's email&#62;<br>to me</span>
+			</div>
+
+			<div class="grow">
+				<div class="warningRight">
+					<div class="icon">!</div>
+				</div>
+				<div class="warningLeft">
+					<span class="title">Warning Message Content</span>
+					<div class="textW">
+						Further information about the specific danger of the message. Quis ipsum suspendisse ultrices gravida. <br>
+						<a href="" target="_blank">Learn More</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="messageContent">
+				<p>Message content,<br><br>
+
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. <br><br>
+
+				Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- JavaScript portion used for the tabs -->
+<script>
+	function openReco(evt, recoName) {
+		// Declare all variables
+		var i, tabcontent, tablinks;
+
+		// Get all elements with class="tabcontent" and hide them
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+
+		// Get all elements with class="tablinks" and remove the class "active"
+		tablinks = document.getElementsByClassName("tablinks");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+
+		// Show the current tab, and add an "active" class to the button that opened the tab
+		document.getElementById(recoName).style.display = "block";
+		evt.currentTarget.className += " active";
+	}
+
+</script>
