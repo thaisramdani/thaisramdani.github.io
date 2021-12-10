@@ -1,0 +1,211 @@
+
+
+/*
+	TAB STYLING
+*/
+
+.tab {
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+	background-color: inherit;
+	float: center;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 1em;
+	transition: 0.5s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+	background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+	background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+	display: none;
+	padding: 1em;
+	border: 1px solid #ccc;
+	border-top: none;
+}
+
+
+
+
+
+
+
+/*
+	COMMON TO BOTH RECOMMENDATIONS
+*/
+
+.around {
+	display: flex;
+	align-items: start;
+	justify-content: space-evenly;
+	width: 50%;
+	box-sizing: border-box;
+	padding: 1em;
+}
+
+.senderimg {
+
+}
+
+.right {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 1em;
+	padding-top: 0;
+}
+
+.senderN {
+	font-size: 19px;
+	font-weight: bold;
+	font-family: Arial;
+	color: #2e2e2e;
+}
+
+.senderE {
+	font-family: Arial;
+	font-size: 15px;
+	color: #575757;
+}
+
+.messageContent {
+	font-family: Arial;
+	position: relative;
+}
+
+
+/*
+	DISTRACTION RESILIENCE RECOMMENDATION
+*/
+
+.warningIcon {
+	width: 17px;
+	height: 17px;
+	color: #fff;
+	font: bold 17px Arial;
+	text-align: center;
+	background-color: #eed202;
+	border-radius: 25px;
+	position: relative;
+	display: inline-block;
+}
+
+.warningIcon .warningText {
+	opacity: 0;
+	transition: opacity .5s;
+	z-index: 1;
+
+	width: 260px;
+	background-color: black;
+	color: white;
+	font-weight: normal;
+	text-align: center;
+	padding: 5px;
+	border-radius: 6px;
+
+	position: absolute;
+	top: 150%;
+	left: 200%;
+	margin-left: -75px;
+}
+
+.warningIcon:hover .warningText {
+	opacity: .9;
+}
+
+
+/*
+	WARNING POLYMORPHISM RECOMMENDATION
+*/
+
+.icon {
+	width: 35px;
+	height: 35px;
+	color: #b33a3a;
+	font-size: 35px;
+	font-weight: bold;
+	text-align: center;
+	background-color: #fff;
+	border-radius: 40px;
+}
+
+.warningLeft {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	padding: 1em;
+	padding-top: 0;
+}
+
+.grow {
+	display: flex;
+	align-items: start;
+	background-color: #b33a3a;
+	padding: 10px;
+	height: 50px;
+	width: 50px;
+	float: left;
+	position: relative;
+	-webkit-animation: boxMove 1.5s ease-in forwards;  
+	animation: boxMove 1.5s ease-in forwards;
+}
+
+@keyframes boxMove {
+	from {
+		width: 35px; 
+		height: 35px;
+	}
+	to {
+		width: 700px; 
+		height: 100px;
+	} 
+}
+
+.title {
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.title, .textW {
+	color: #fff;
+	font-family: Arial;
+	-webkit-animation: warningInfo 1.5s ease-in forwards;  
+	animation: warningInfo 1.5s ease-in forwards;
+}
+
+@keyframes warningInfo {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	} 
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+	font-family: Arial;
+	border-radius: 10px;
+	border: 1px solid #fff;
+	padding: 5px;
+	float: right;
+}
+
