@@ -1,14 +1,29 @@
 <!-- Import CSS -->
 <link rel="stylesheet" type="text/css" href="./RecoCSS.css"  />
 
+<div class="title">
+	Design Recommendations
+</div>
 
+<div class="informationMessage">
+	Below are the two design recommendations made for the purpose of completion of the Degree of Master of Science at The University of Glasgow.
 
+	<br><br>
 
-<!-- Tab links -->
+	Each tab contains one recommendation and both are interactive. Full HTML code and CSS source file are available through the inspect tab on this page.
+
+	<br><br>
+
+	Click on a tab to show the recommendation.<br><br>
+</div>
+
+<!-- tab links -->
 <div class="tab">
 	<button class="tablinks" onclick="openReco(event, 'DissRes')">Distraction Resilience Design Recommendation</button>
 	<button class="tablinks" onclick="openReco(event, 'WarnPoly')">Warning Polymorphism Design Recommendation</button>
 </div>
+
+
 
 <!-- DISTRACTION RESILIENCE RECOMMENDATION TAB -->
 <div id="DissRes" class="tabcontent">
@@ -17,9 +32,11 @@
 		<div class="senderimg"><img src="https://images2.imgbox.com/c3/c6/xuzuGfoM_o.png" width="40"></div>
 
 		<div class="right">
+			<!-- displays sender information -->
 			<div class="sender">
 				<span class="senderN">Sender name</span> <span class="senderE">&#60;sender's email&#62;</span><br>
 				<div class="warningIcon">!
+					<!-- warning text is hidden until icon hovered -->
 					<span class="warningText">You moved this email out of spam.</span>
 				</div>
 				<span class="senderE">to me</span>
@@ -48,12 +65,14 @@
 				<span class="senderN">Sender name</span> <span class="senderE">&#60;sender's email&#62;<br>to me</span>
 			</div>
 
+			<!-- growing warning box -->
 			<div class="grow">
 				<div class="warningRight">
 					<div class="icon">!</div>
 				</div>
+				<!-- warning content will appear as the box containing it grows -->
 				<div class="warningLeft">
-					<span class="title">Warning Message Content</span>
+					<span class="titleW">Warning Message Content</span>
 					<div class="textW">
 						Further information about the specific danger of the message. Quis ipsum suspendisse ultrices gravida. <br>
 						<a href="" target="_blank">Learn More</a>
@@ -78,22 +97,21 @@
 <!-- JavaScript portion used for the tabs -->
 <script>
 	function openReco(evt, recoName) {
-		// Declare all variables
 		var i, tabcontent, tablinks;
 
-		// Get all elements with class="tabcontent" and hide them
+		// store tabcontent elements and keep them hidden
 		tabcontent = document.getElementsByClassName("tabcontent");
 		for (i = 0; i < tabcontent.length; i++) {
 			tabcontent[i].style.display = "none";
 		}
 
-		// Get all elements with class="tablinks" and remove the class "active"
+		// set all tab links to inactive by default
 		tablinks = document.getElementsByClassName("tablinks");
 		for (i = 0; i < tablinks.length; i++) {
 			tablinks[i].className = tablinks[i].className.replace(" active", "");
 		}
 
-		// Show the current tab, and add an "active" class to the button that opened the tab
+		// display current tage and set opened tab as active
 		document.getElementById(recoName).style.display = "block";
 		evt.currentTarget.className += " active";
 	}
